@@ -1,0 +1,13 @@
+#loader {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  background: yellow;
+  color: black;
+  top: 20%;
+  left: 50%;
+  margin: -25px 0 0 -100px;
+  text-align: center;
+  z-index: 999;
+}

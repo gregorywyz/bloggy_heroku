@@ -1,0 +1,30 @@
+<div ng-app="BloggyApp" class="container">
+
+  <div ng-if="$root.loading" id="loader">
+    Loading...
+  </div>
+
+  <nav ng-controller="NavCtrl" class="navbar navbar-inverse">
+    <a class="navbar-brand" href="/">Bloggy</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a ng-click="showLogin()" ng-hide="currentUser" href="#">Login</a>
+        <a ng-click="logout()" ng-show="currentUser" href="#">Logout</a>
+      </li>
+      <li ng-show="currentUser">
+        <a style="color:orange;">{{currentUser.firstName || 'User'}}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <alerts></alerts>
+
+  <ng-view></ng-view>
+
+</div>
